@@ -70,14 +70,34 @@ def inject_styles() -> None:
             color: var(--ink) !important;
         }
 
-        [data-testid="stSidebar"] [data-baseweb="select"] > div {
-            background: #ffffff;
-            border: 1px solid var(--border);
+        [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"],
+        [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+        [data-testid="stSidebar"] [data-testid="stSelectbox"] [role="combobox"] {
+            background: #ffffff !important;
+            border: 1px solid var(--border) !important;
+            color: var(--ink) !important;
         }
 
-        [data-testid="stSidebar"] [data-baseweb="select"] *,
-        [data-testid="stSidebar"] [data-baseweb="select"] input {
+        [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] *,
+        [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] input,
+        [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] svg {
             color: var(--ink) !important;
+            fill: var(--ink) !important;
+        }
+
+        [data-baseweb="popover"],
+        [data-baseweb="menu"],
+        [role="listbox"] {
+            background: #ffffff !important;
+            color: var(--ink) !important;
+        }
+
+        [role="option"] {
+            color: var(--ink) !important;
+        }
+
+        [role="option"]:hover {
+            background: #f2f4f7 !important;
         }
 
         .brand {
