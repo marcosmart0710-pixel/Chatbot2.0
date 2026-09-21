@@ -1,1 +1,2 @@
-hola
+streamlit
+langchain-groq
